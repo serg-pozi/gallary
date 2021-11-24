@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap'); 
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+  font-family: 'Muli', sans-serif;
+  overflow: hidden;
+  background: rgb(97,117,115);
+  background: -moz-linear-gradient(45deg, rgba(97,117,115,1) 0%, rgba(7,105,92,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(97,117,115,1) 0%, rgba(7,105,92,1) 100%);
+  background: linear-gradient(45deg, rgba(97,117,115,1) 0%, rgba(7,105,92,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#617573",endColorstr="#07695c",GradientType=1);
+}
+.container {
+  width: 100%;
+  display: flex;
+  padding: 0 20px;
+}
+.slide {
+  position: relative;
+  flex: 1;
+  height: 80vh;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  -webkit-box-shadow: 4px 4px 8px 0px rgba(8, 18, 26, 0.2);
+  -moz-box-shadow: 4px 4px 8px 0px rgba(8, 18, 26, 0.2);
+  box-shadow: 4px 4px 8px 0px rgba(8, 18, 26, 0.2);
+  transition: all 500ms ease-in-out;
+}
+.slide h3 {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+  font-size: 24px;
+}
+.slide.active {
+  flex: 10;
+}
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
